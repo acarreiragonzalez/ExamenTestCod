@@ -40,10 +40,10 @@ public class CalculoTest {
     @Parameterized.Parameters
     public static Collection MCDnumeros() {
         return Arrays.asList(new Object[][]{
+            {new Calculo(2, 4), 2},
+            {new Calculo(2, -7), 1},
             {new Calculo(2, 2), 2},
-            {new Calculo(2, 5), 1},
-            {new Calculo(2, 2), 2},
-            {new Calculo(2, -1), 3}
+            {new Calculo(2, -2), 3}
 
         });
     }
