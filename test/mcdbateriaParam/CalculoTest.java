@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package mcdbateria;
+package mcdbateriaParam;
 
 import mcdbateriaParam.Calculo;
 import java.util.Arrays;

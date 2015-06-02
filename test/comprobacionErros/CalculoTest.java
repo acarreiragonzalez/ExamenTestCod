@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package comprobacion;
+package comprobacionErros;
 
 import comprobacionErros.Calculo;
 import org.junit.After;
