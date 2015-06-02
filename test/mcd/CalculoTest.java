@@ -36,14 +36,14 @@ public class CalculoTest {
     @Test
     public void testObtenerMCD() {
         System.out.println("obtenerMCD");
-        int num1 = 0;
-        int num2 = 0;
+        int num1 = 2;
+        int num2 = 2;
         Calculo instance = new Calculo();
-        int expResult = 0;
+        int expResult = 2;
         int result = instance.obtenerMCD(num1, num2);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
     
 }
