@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package mcdbateria;
+package comprobacionErros;
 
 import mcd.*;
 
@@ -17,13 +17,9 @@ public class Calculo {
  private int numero1;
     private int numero2;
     private String mensajeResultado = "";
+ String  mensaxeproba;
 
     public Calculo() {
-    }
-    
-
-    Calculo(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     //setters
@@ -59,6 +55,18 @@ public class Calculo {
 
     public int getNumero2() {
         return numero2;
+    }
+     public String comprobarErros(int num1, int num2) {
+        numero1 = num1;
+        numero2 = num2;
+        if (numero1 < 0 || numero2 < 0) {
+            return mensaxeproba = "Os números non deben ser negativos";
+        }
+        if (obtenerMCD(numero1, numero2) < 0) {
+            return mensaxeproba = "Fíxose correctamente";
+        } else {
+            return mensaxeproba = "Erro descoñecido";
+        }
     }
 
     //método para calcular el MCD

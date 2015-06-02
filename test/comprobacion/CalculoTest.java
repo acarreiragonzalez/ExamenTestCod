@@ -6,6 +6,7 @@
 
 package comprobacion;
 
+import comprobacionErros.Calculo;
 import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.*;
@@ -42,7 +43,7 @@ public class CalculoTest {
      * Test of testSetNum1 method, of class Calculo.
      */
     @Test
-    public void testMensajeria() {
+    public void comprobarErros() {
         int num1 = -1;
         int num2 = 7;
         Calculo instance = new Calculo();

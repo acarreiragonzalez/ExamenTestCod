@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package comprobacion;
+package mcdbateriaParam;
 
 import mcd.*;
 import java.io.BufferedReader;

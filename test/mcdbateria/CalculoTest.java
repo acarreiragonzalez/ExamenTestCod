@@ -6,6 +6,7 @@
 
 package mcdbateria;
 
+import mcdbateriaParam.Calculo;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.AfterClass;
