@@ -22,41 +22,35 @@ import org.junit.runners.Parameterized;
  */
 @RunWith(Parameterized.class)
 public class CalculoTest {
-    
-    private int numero1;
-    private int numero2;
-  
-    private  String mensajeResultado = "";
-    private Calculo conecta;
-    
-   
-    
-    @Before
-    public void initialize(){
-    } 
 
-    public CalculoTest(int numero1, int numero2, String mensajeResultado) {
-        this.numero1 = numero1;
-        this.numero2 = numero2;
-        this.mensajeResultado=mensajeResultado;
-      
+    private int result;
+    Calculo cal = new Calculo();
+
+    @Before
+    public void initialize() {
+
     }
-    
-  @Parameterized.Parameters
-    public static Collection primeNumbers() {
+
+    public CalculoTest(Calculo cal, int result) {
+        this.cal = cal;
+        this.result = result;
+
+    }
+
+    @Parameterized.Parameters
+    public static Collection MCDnumeros() {
         return Arrays.asList(new Object[][]{
-            {2, 2},
-            {4, 8},
-            {2, 4},
-            {10, 20}
+            {new Calculo(2, 2), 2},
+            {new Calculo(2, 5), 1},
+            {new Calculo(2, 2), 2},
+            {new Calculo(2, -1), 3}
+
         });
     }
 
     @Test
-    public void testMain() {
-        System.out.println("Parameterized Number is : " + numero1 + " " + numero2 + " ---> " + mensajeResultado);
-        assertEquals(mensajeResultado,
-             conecta.obtenerMCD(numero1,numero2),0.0);
+    public void testMCDnumbersChecker() {
+        System.out.println("Parameterized MCD is : " + result);
+        assertEquals(result, cal.obtenerMCD(cal.getNumero1(), cal.getNumero2()));
     }
-
 }

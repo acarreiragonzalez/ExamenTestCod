@@ -20,6 +20,11 @@ public class Calculo {
 
     public Calculo() {
     }
+    
+
+    Calculo(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     //setters
     public void setNumero1(int numero) {
